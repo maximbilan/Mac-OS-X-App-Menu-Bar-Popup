@@ -54,12 +54,12 @@
 		94E0FC3D1BD7FC3600A3C537 /* Popup */ = {
 			isa = PBXGroup;
 			children = (
-				94E0FC4D1BD7FCBE00A3C537 /* EventMonitor.swift */,
 				94E0FC3E1BD7FC3600A3C537 /* AppDelegate.swift */,
 				94E0FC401BD7FC3600A3C537 /* ViewController.swift */,
-				94E0FC421BD7FC3600A3C537 /* Assets.xcassets */,
-				94E0FC441BD7FC3600A3C537 /* Main.storyboard */,
+				94E0FC4D1BD7FCBE00A3C537 /* EventMonitor.swift */,
 				94E0FC471BD7FC3600A3C537 /* Info.plist */,
+				94E0FC441BD7FC3600A3C537 /* Main.storyboard */,
+				94E0FC421BD7FC3600A3C537 /* Assets.xcassets */,
 			);
 			path = Popup;
 			sourceTree = "<group>";
