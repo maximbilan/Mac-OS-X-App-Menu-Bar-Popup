@@ -1,6 +1,7 @@
 # Mac OS X Application like a menu bar popup message
 
-Simple tutorial which explains how to create Mac OS X application as a menu bar popup message. Like that:
+Simple tutorial which explains how to create Mac OS X application as a menu bar popup message.
+Like that:
 
 ![alt tag](https://raw.github.com/maximbilan/Mac-OS-X-App-Menu-Bar-Popup/master/screenshots/1.png)
 
