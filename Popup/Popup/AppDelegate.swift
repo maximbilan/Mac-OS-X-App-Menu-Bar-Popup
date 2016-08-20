@@ -19,7 +19,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 		
 		if let button = statusItem.button {
 			button.image = NSImage(named: "StatusBarButtonImage")
-			button.action = Selector("togglePopover:")
+			button.action = #selector(AppDelegate.togglePopover(_:))
 		}
 		
 		let mainViewController = NSStoryboard(name: "Main", bundle: nil).instantiateControllerWithIdentifier("ViewControllerId") as! ViewController
