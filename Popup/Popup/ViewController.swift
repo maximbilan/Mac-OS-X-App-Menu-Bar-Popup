@@ -22,6 +22,9 @@ class ViewController: NSViewController {
 		}
 	}
 
+	@IBAction func closeButtonAction(sender: NSButton) {
+		NSApp.terminate(self)
+	}
 
 }
 
