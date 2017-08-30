@@ -11,7 +11,7 @@ import Cocoa
 @NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate {
 
-	let statusItem = NSStatusBar.system().statusItem(withLength: -2)
+	let statusItem = NSStatusBar.system().statusItem(withLength: NSSquareStatusItemLength)
 	let popover = NSPopover()
 	var eventMonitor: EventMonitor?
 
@@ -26,9 +26,11 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 		
 		popover.contentViewController = mainViewController
 		
-		eventMonitor = EventMonitor(mask: [.leftMouseDown, .rightMouseDown]) { [unowned self] event in
-			if self.popover.isShown {
-				self.closePopover(event)
+		eventMonitor = EventMonitor(mask: [.leftMouseDown, .rightMouseDown]) { [weak self] event in
+			if let popover = self?.popover {
+				if popover.isShown {
+					self?.closePopover(event)
+				}
 			}
 		}
 		eventMonitor?.start()
@@ -48,8 +50,8 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 	func showPopover(_ sender: AnyObject?) {
 		if let button = statusItem.button {
 			popover.show(relativeTo: button.bounds, of: button, preferredEdge: NSRectEdge.minY)
+			eventMonitor?.start()
 		}
-		eventMonitor?.start()
 	}
 	
 	func closePopover(_ sender: AnyObject?) {
