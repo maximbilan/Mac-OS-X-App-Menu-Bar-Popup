@@ -97,4 +97,4 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 
 It’s really simple and I think no sense to describe details, just see the code.
 
-Full code of this example you can found in this repository.
+Full code of this example you can find in this repository.
