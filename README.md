@@ -38,7 +38,7 @@ open class EventMonitor {
 }
 </pre>
 
-And example of <i>AppDelegate</i>:
+And the example of <i>AppDelegate</i>:
 
 <pre>
 import Cocoa
