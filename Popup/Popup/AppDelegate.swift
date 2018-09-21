@@ -18,11 +18,11 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 	func applicationDidFinishLaunching(_ aNotification: Notification) {
 		
 		if let button = statusItem.button {
-			button.image = NSImage(named: NSImage.Name(rawValue: "StatusBarButtonImage"))
+			button.image = NSImage(named: "StatusBarButtonImage")
 			button.action = #selector(AppDelegate.togglePopover(_:))
 		}
 		
-		let mainViewController = NSStoryboard(name: NSStoryboard.Name(rawValue: "Main"), bundle: nil).instantiateController(withIdentifier: NSStoryboard.SceneIdentifier(rawValue: "ViewControllerId")) as! ViewController
+		let mainViewController = NSStoryboard(name: "Main", bundle: nil).instantiateController(withIdentifier: "ViewControllerId") as! ViewController
 		
 		popover.contentViewController = mainViewController
 		
